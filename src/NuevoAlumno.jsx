@@ -46,6 +46,7 @@ const NuevoAlumno = ({ setAlumnos, alumnos }) => {
       email: nuevoAlumno.email,
       domicilio: nuevoAlumno.domicilio,
       telefono: nuevoAlumno.telefono,
+      lu: siguienteLU,
       estado: true, // Por defecto, el estado es activo
     };
 
