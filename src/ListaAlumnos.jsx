@@ -5,17 +5,17 @@ import { useNavigate } from "react-router-dom";
 
 function ListaAlumnos({alumnos}) {
   const navigate = useNavigate();
-  const listaAlumnos = alumnos.map((alumno, lu) => (
-    <div key={lu} className="col-md-4 d-flex">
+  const listaAlumnos = alumnos.filter(alumno => alumno.estado).map((alumno) => (
+    <div key={alumno.lu} className="col-md-4 d-flex">
       <Card style={{ margin: "10px", flex: 1 }}>
         <Card.Body>
           <Card.Title>{alumno.nombre} {alumno.apellido}</Card.Title>
           <Card.Text>
              Datos del alumno LU: {alumno.lu}
           </Card.Text>
-          <Button variant="danger" onClick={() => eliminarAlumno(lu)}>Eliminar</Button>
+          <Button variant="danger" onClick={() => eliminarAlumno(alumno.lu)}>Eliminar</Button>
           <Button variant="success" onClick={() => navigate(`/editar-alumno/${alumno.lu}`)}>Editar</Button>
-          <Button variant="info" onClick={() => verDetalles(lu)}>Ver Detalles</Button>
+          <Button variant="info" onClick={() => verDetalles(alumno.lu)}>Ver Detalles</Button>
         </Card.Body>
       </Card>
     </div>
