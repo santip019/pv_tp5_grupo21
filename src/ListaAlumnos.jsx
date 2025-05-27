@@ -15,7 +15,7 @@ function ListaAlumnos({alumnos}) {
           </Card.Text>
           <Button variant="danger" onClick={() => eliminarAlumno(alumno.lu)}>Eliminar</Button>
           <Button variant="success" onClick={() => navigate(`/editar-alumno/${alumno.lu}`)}>Editar</Button>
-          <Button variant="info" onClick={() => verDetalles(alumno.lu)}>Ver Detalles</Button>
+          <Button variant="info" onClick={() => navigate(`/alumno/${alumno.lu}`)}>Ver Detalles</Button>
         </Card.Body>
       </Card>
     </div>
