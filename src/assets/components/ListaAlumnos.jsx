@@ -4,7 +4,7 @@ import Badge from 'react-bootstrap/Badge';
 import { useNavigate } from "react-router-dom";
 import '../../../src/App.css';
 
-function ListaAlumnos({alumnos}) {
+function ListaAlumnos({alumnos, eliminarAlumno}) {
   const navigate = useNavigate();
   const listaAlumnos = alumnos.filter(alumno => alumno.estado).map((alumno) => (
     <div key={alumno.lu} className="col-md-4 d-flex">

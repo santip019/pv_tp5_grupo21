@@ -16,11 +16,19 @@ function App() {
     console.log(alumnos);
   }, [alumnos]);
   
+    const eliminarAlumno = (lu) => {
+    setAlumnos(prevAlumnos =>
+      prevAlumnos.map(alumno =>
+        alumno.lu === lu ? { ...alumno, estado: false } : alumno
+      )
+    );
+  };
+
   return(
     <Routes>  
       <Route path="/" element={ <Layout /> }> 
         <Route index element={ <Inicio /> } />
-        <Route path="/alumnos" element={ <ListaAlumnos alumnos={alumnos} /> } />
+        <Route path="/alumnos" element={ <ListaAlumnos alumnos={alumnos} eliminarAlumno={eliminarAlumno}/> } />
         <Route path="/nuevo-alumno" element={ <NuevoAlumno setAlumnos={setAlumnos} alumnos={alumnos} /> } />
         <Route path="/editar-alumno/:lu" element={ <EditarAlumno alumnos={alumnos} setAlumnos={setAlumnos} /> } />
         <Route path="/alumno/:lu" element={<VerDetalles alumnos={alumnos} />} />
