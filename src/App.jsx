@@ -1,16 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Routes, Route } from 'react-router-dom'
-import Inicio from './Inicio'
-import ListaAlumnos from './ListaAlumnos.jsx'
-import NuevoAlumno from './NuevoAlumno.jsx'
-import AcercaDe from './AcercaDe.jsx'
-import Layout from './Layout.jsx'
-import EditarAlumno from "./EditarAlumno.jsx";
-import VerDetalles from './VerDetalles.jsx'
+import Inicio from './assets/components/Inicio.jsx'
+import ListaAlumnos from './assets/components/ListaAlumnos.jsx'
+import NuevoAlumno from './assets/components/NuevoAlumno.jsx'
+import AcercaDe from './assets/components/AcercaDe.jsx'
+import Layout from './assets/components/Layout.jsx'
+import EditarAlumno from "./assets/components/EditarAlumno.jsx";
+import VerDetalles from './assets/components/VerDetalles.jsx'
 
 
 function App() {
   const [alumnos, setAlumnos] = useState([]);
+
+  useEffect(() => {
+    console.log(alumnos);
+  }, [alumnos]);
+  
   return(
     <Routes>  
       <Route path="/" element={ <Layout /> }> 

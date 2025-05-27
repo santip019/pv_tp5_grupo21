@@ -77,7 +77,7 @@ const NuevoAlumno = ({ setAlumnos, alumnos }) => {
           name="nombre"
           value={nuevoAlumno.nombre}
           onChange={manejarCambio}
-          pattern="^(?!\s*$)[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"
+          pattern="^(?!\s*$)[a-zA-ZáéíóúÁÉÍÓÚñÑ0\s]+$"
           title="Solo letras y espacios, no solo espacios"
         />
       </div>
@@ -99,8 +99,8 @@ const NuevoAlumno = ({ setAlumnos, alumnos }) => {
           name="curso"
           value={nuevoAlumno.curso}
           onChange={manejarCambio}
-          pattern="^(?!\s*$)[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"
-          title="Solo letras y espacios, no solo espacios"
+          pattern="^(?!\s*$)[a-zA-ZáéíóúÁÉÍÓÚñÑ0-9\s]+$"
+          title="Letras, números y espacios, no solo espacios"
         />
       </div>
       <div>
@@ -119,8 +119,8 @@ const NuevoAlumno = ({ setAlumnos, alumnos }) => {
           name="domicilio"
           value={nuevoAlumno.domicilio}
           onChange={manejarCambio}
-          pattern="^(?!\s*$)[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"
-          title="Solo letras y espacios, no solo espacios"
+          pattern="^(?!\s*$)[a-zA-ZáéíóúÁÉÍÓÚñÑ0-9\s]+$"
+          title="Letras, números y espacios, no solo espacios"
         />
       </div>
       <div>
@@ -130,7 +130,6 @@ const NuevoAlumno = ({ setAlumnos, alumnos }) => {
           name="telefono"
           value={nuevoAlumno.telefono}
           onChange={manejarCambio}
-          pattern="[0-9\s+()-]*"
           title="Solo números y caracteres válidos para teléfono"
         />
       </div>

@@ -1,9 +1,9 @@
 import Carousel from 'react-bootstrap/Carousel'
 import ImagenCarrusel from './ImagenCarrusel' //componente reutilizable para poder darle un formato establecido a cada imagen
-import imagen1 from './assets/img/carrusel1.jpg'
-import imagen2 from './assets/img/carrusel2.jpg'
-import imagen3 from './assets/img/carrusel3.png'
-import './App.css'
+import imagen1 from '../img/carrusel1.jpg'
+import imagen2 from '../img/carrusel2.jpg'
+import imagen3 from '../img/carrusel3.png'
+import '../../../src/App.css'
 
 function Inicio() {
   return (
