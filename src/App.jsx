@@ -7,6 +7,7 @@ import AcercaDe from './assets/components/AcercaDe.jsx'
 import Layout from './assets/components/Layout.jsx'
 import EditarAlumno from "./assets/components/EditarAlumno.jsx";
 import VerDetalles from './assets/components/VerDetalles.jsx'
+import Papelera from './assets/components/Papelera.jsx';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
         <Route path="/editar-alumno/:lu" element={ <EditarAlumno alumnos={alumnos} setAlumnos={setAlumnos} /> } />
         <Route path="/alumno/:lu" element={<VerDetalles alumnos={alumnos} />} />
         <Route path="/Acerca-De" element={ <AcercaDe /> } />
+        <Route path="/papelera" element={<Papelera alumnos={alumnos} setAlumnos={setAlumnos} />} />
       </Route>
     </Routes>
   )
