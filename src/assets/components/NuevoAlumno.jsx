@@ -1,68 +1,12 @@
-import { useState, useCallback } from "react";
+import { useNuevoAlumno } from '../../hooks/useNuevoAlumno';
 
 const NuevoAlumno = ({ setAlumnos, alumnos }) => {
-  const [nuevoAlumno, setNuevoAlumno] = useState({
-    nombre: "",
-    apellido: "",
-    curso: "",
-    email: "",
-    domicilio: "",
-    telefono: "",
-    estado: true,
-  });
-
-  const siguienteLU = "APU" + String(alumnos.length + 1).padStart(5, "0");
-
-  const manejarCambio = useCallback((evento) => {
-    const { name, value } = evento.target;
-    setNuevoAlumno((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  }, []);
-
-  const manejarEnvio = (evento) => {
-    evento.preventDefault();
-
-    // Validación de que todos los campos estén llenos
-    if (
-      !nuevoAlumno.nombre ||
-      !nuevoAlumno.apellido ||
-      !nuevoAlumno.curso ||
-      !nuevoAlumno.email ||
-      !nuevoAlumno.domicilio ||
-      !nuevoAlumno.telefono
-    ) {
-      alert("Por favor, completa todos los campos.");
-      return;
-    }
-
-    // Crear un nuevo alumno
-    const agregarAlumno = {
-      ...nuevoAlumno,
-      nombre: nuevoAlumno.nombre,
-      apellido: nuevoAlumno.apellido,
-      curso: nuevoAlumno.curso,
-      email: nuevoAlumno.email,
-      domicilio: nuevoAlumno.domicilio,
-      telefono: nuevoAlumno.telefono,
-      lu: siguienteLU,
-      estado: true, // Por defecto, el estado es activo
-    };
-
-    // Llamar a la función para agregar el nuevo alumno
-    setAlumnos((prev) => [...prev, agregarAlumno]);
-
-    // Reiniciar el formulario
-    setNuevoAlumno({
-      nombre: "",
-      apellido: "",
-      curso: "",
-      email: "",
-      domicilio: "",
-      telefono: "",
-    });
-  };
+  const {
+    nuevoAlumno,
+    siguienteLU,
+    manejarCambio,
+    manejarEnvio,
+  } = useNuevoAlumno(alumnos, setAlumnos);
 
   return (
     <form onSubmit={manejarEnvio}>
@@ -149,4 +93,5 @@ const NuevoAlumno = ({ setAlumnos, alumnos }) => {
     </form>
   );
 };
+
 export default NuevoAlumno;
