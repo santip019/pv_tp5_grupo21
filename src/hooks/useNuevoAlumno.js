@@ -11,6 +11,8 @@ export function useNuevoAlumno(alumnos, setAlumnos) {
     estado: true,
   });
 
+  const [alerta, setAlerta] = useState("");
+
   const siguienteLU = "APU" + String(alumnos.length + 1).padStart(5, "0");
 
   const manejarCambio = useCallback((evento) => {
@@ -32,7 +34,7 @@ export function useNuevoAlumno(alumnos, setAlumnos) {
       !nuevoAlumno.domicilio ||
       !nuevoAlumno.telefono
     ) {
-      alert("Por favor, completa todos los campos.");
+      setAlerta("Por favor, completa todos los campos.");
       return;
     }
 
@@ -53,13 +55,18 @@ export function useNuevoAlumno(alumnos, setAlumnos) {
       telefono: "",
       estado: true,
     });
+    setAlerta("");
   };
+
+  const cerrarAlerta = () => setAlerta("");
 
   return {
     nuevoAlumno,
     setNuevoAlumno,
     siguienteLU,
     manejarCambio,
+    alerta,
     manejarEnvio,
+    cerrarAlerta,
   };
 }
