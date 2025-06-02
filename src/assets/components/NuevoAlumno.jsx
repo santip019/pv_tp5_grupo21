@@ -1,6 +1,7 @@
 import { useNuevoAlumno } from '../../hooks/useNuevoAlumno';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import Alert from 'react-bootstrap/Alert';
 
 const NuevoAlumno = ({ setAlumnos, alumnos }) => {
   const {
@@ -8,10 +9,17 @@ const NuevoAlumno = ({ setAlumnos, alumnos }) => {
     siguienteLU,
     manejarCambio,
     manejarEnvio,
+    alerta,
+    cerrarAlerta,
   } = useNuevoAlumno(alumnos, setAlumnos);
 
   return (
     <Form onSubmit={manejarEnvio}>
+      {alerta && (
+        <Alert variant="danger" onClose={cerrarAlerta} dismissible>
+          {alerta}
+        </Alert>
+      )}
       <Form.Group className="mb-3" controlId="formBasicLU">
         <Form.Label>LU: </Form.Label>
         <Form.Control type="text" name="lu" value={siguienteLU} disabled />
