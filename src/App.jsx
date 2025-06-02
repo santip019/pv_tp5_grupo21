@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Routes, Route } from 'react-router-dom'
+import { useFunciones } from './hooks/useFunciones.js'; // hook personalizado
 import Inicio from './assets/components/Inicio.jsx'
 import ListaAlumnos from './assets/components/ListaAlumnos.jsx'
 import NuevoAlumno from './assets/components/NuevoAlumno.jsx'
@@ -11,19 +12,7 @@ import Papelera from './assets/components/Papelera.jsx';
 
 
 function App() {
-  const [alumnos, setAlumnos] = useState([]);
-
-  useEffect(() => {
-    console.log(alumnos);
-  }, [alumnos]);
-  
-    const eliminarAlumno = (lu) => {
-    setAlumnos(prevAlumnos =>
-      prevAlumnos.map(alumno =>
-        alumno.lu === lu ? { ...alumno, estado: false } : alumno
-      )
-    );
-  };
+  const { alumnos, setAlumnos, eliminarAlumno } = useFunciones();
 
   return(
     <Routes>  
