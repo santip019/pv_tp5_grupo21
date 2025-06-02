@@ -1,9 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cal+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cal+Sans&family=Varta:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&display=swap');
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
+
+/*
+font-family: "Cal Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 
 .logo {
   height: 6em;
@@ -16,28 +29,97 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}*/
+
+.navbar-brand, .nav-link {
+  font-family: "Varta", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  padding: 1rem;
+  color: rgb(46, 46, 46);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-brand:hover, .nav-link:hover {
+  color: #007434;
+  transition: color 0.2s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.intro-titulo {
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  color: #7ea384;
+  text-transform: uppercase;
+  padding: 20px;
+  font-size: 50px;
 }
+
+.intro-texto {
+  font-family: "Chocolate Classical Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #3d3d3d;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hasta acá es INICIO */
+
+.badge.bg-primary {
+  width: 100%;
+  height: auto;
+  background-color: #8bb171 !important;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+}
+
+.btn.btn-danger, .btn.btn-success, .btn.btn-info, .btn.btn-secondary, .btn.btn-primary {
+  font-family: "Chocolate Classical Sans", sans-serif;
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+/* Hasta acá es ALUMNOS */
 
 .card {
   padding: 2em;
   margin: 10px;
   flex: 1;
 }
+
+h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 4rem;
+  color: #739277;
+}
+
+.mb-3-form{
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+.form-label, .card-title.h5{
+  font-family: "Chocolate Classical Sans", sans-serif;
+  color: #3d3d3d;
+  font-weight: 600;
+}
+
+/* Hasta acá es EDITAR */
+
+
+
+
+
+
 
 .read-the-docs {
   color: #888;
@@ -77,21 +159,18 @@
   right: 100px; 
 }
 
-.intro {
-  padding: 0 15px; 
-  margin-bottom: 30px; 
-  color: #161a42; 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-.intro.titulo {
-   font-size: 40px;
-   font-weight: 700;
-}
-.intro-texto {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #555555;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
