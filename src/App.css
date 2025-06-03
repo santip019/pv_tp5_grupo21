@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cal+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cal+Sans&family=Varta:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cal+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cal+Sans&family=Varta:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&display=swap");
 
 #root {
   height: 100%;
@@ -9,41 +9,20 @@
   text-align: center;
 }
 
-/*
-font-family: "Cal Sans", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}*/
-
-.navbar{
-   display: flex;
-   flex-direction: row;
-   justify-content: space-evenly;
-   width: 100%;
-   text-align: center;
-   padding: 0;
-   background-color: #eaf3e6 !important; /* Gris verdoso muy suave */
-   border-bottom: 2px solid #7ea384;
-   box-shadow: 0 2px 8px rgba(126,163,132,0.05);
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  background-color: #eaf3e6 !important; /* Gris verdoso muy suave */
+  border-bottom: 2px solid #7ea384;
+  box-shadow: 0 2px 8px rgba(126, 163, 132, 0.05);
 }
 
-.navbar-brand, .nav-link {
+.navbar-brand,
+.nav-link {
   flex: 1 1 0;
   font-family: "Varta", sans-serif;
   font-weight: 600;
@@ -54,11 +33,13 @@ font-family: "Cal Sans", sans-serif;
   color: #3d3d3d;
 }
 
-.navbar-brand:hover, .nav-link:hover {
+.navbar-brand:hover,
+.nav-link:hover {
   color: #007434;
   transition: color 0.2s;
 }
-.navbar .nav-link:hover, .navbar .nav-link.active {
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
   background: #d7df72;
   color: #7ea384;
 }
@@ -107,7 +88,11 @@ font-family: "Cal Sans", sans-serif;
   padding: 1rem 2rem;
 }
 
-.btn.btn-danger, .btn.btn-success, .btn.btn-info, .btn.btn-secondary, .btn.btn-primary {
+.btn.btn-danger,
+.btn.btn-success,
+.btn.btn-info,
+.btn.btn-secondary,
+.btn.btn-primary {
   font-family: "Chocolate Classical Sans", sans-serif;
   font-size: 13px;
   margin-top: 20px;
@@ -128,23 +113,20 @@ h2 {
   color: #739277;
 }
 
-.mb-3-form{
+.mb-3-form {
   max-width: 500px;
   margin: 0 auto;
   margin-top: 25px;
 }
 
-.form-label, .card-title.h5{
+.form-label,
+.card-title.h5 {
   font-family: "Chocolate Classical Sans", sans-serif;
   color: #3d3d3d;
   font-weight: 600;
 }
 
 /* Hasta acá es EDITAR */
-
-
-
-
 
 /* Empieza acá CARRUSEL */
 
@@ -168,13 +150,16 @@ h2 {
   padding: 0;
 }
 .carousel-caption {
-  background: linear-gradient(180deg, rgba(126,163,132,0.7) 0%, rgba(126,163,132,0.3) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(126, 163, 132, 0.7) 0%,
+    rgba(126, 163, 132, 0.3) 100%
+  );
   border-radius: 10px;
   padding: 20px;
   max-width: 80%;
   margin: 0 auto;
 }
-
 
 .read-the-docs {
   color: #888;
@@ -190,13 +175,13 @@ h2 {
 
 .descripcion-carrusel h3 {
   color: #ffffff;
-  font-size: 2rem; 
+  font-size: 2rem;
   text-shadow: 1px 1px 6px #7ea384;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
 .descripcion-carrusel p {
   color: #f8f8f8;
-  font-size: 1.1rem; 
+  font-size: 1.1rem;
   text-shadow: 1px 1px 4px #7ea384;
   margin: 0;
 }
@@ -206,19 +191,19 @@ h2 {
   filter: invert(1);
   width: 30px;
   height: 30px;
-  background-color: #afa9a9; 
+  background-color: #afa9a9;
   border-radius: 50%;
 }
 .carousel-control-prev {
   left: 100px;
 }
 .carousel-control-next {
-  right: 100px; 
+  right: 100px;
 }
 
-
 @media (max-width: 600px) {
-  .carousel-full, .carousel-full img {
+  .carousel-full,
+  .carousel-full img {
     height: 30vh;
     min-height: 120px;
   }
