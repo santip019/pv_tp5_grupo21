@@ -3,9 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&display=swap');
 
 #root {
-  max-width: 1280px;
+  height: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
 }
 
@@ -31,17 +31,36 @@ font-family: "Cal Sans", sans-serif;
   filter: drop-shadow(0 0 2em #61dafbaa);
 }*/
 
+.navbar{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   width: 100%;
+   text-align: center;
+   padding: 0;
+   background-color: #eaf3e6 !important; /* Gris verdoso muy suave */
+   border-bottom: 2px solid #7ea384;
+   box-shadow: 0 2px 8px rgba(126,163,132,0.05);
+}
+
 .navbar-brand, .nav-link {
+  flex: 1 1 0;
   font-family: "Varta", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
   padding: 1rem;
-  color: rgb(46, 46, 46);
+  text-align: center;
+  transition: background 0.2s, color 0.2s;
+  color: #3d3d3d;
 }
 
 .navbar-brand:hover, .nav-link:hover {
   color: #007434;
   transition: color 0.2s;
+}
+.navbar .nav-link:hover, .navbar .nav-link.active {
+  background: #d7df72;
+  color: #7ea384;
 }
 
 .intro-titulo {
@@ -50,8 +69,16 @@ font-family: "Cal Sans", sans-serif;
   text-align: center;
   color: #7ea384;
   text-transform: uppercase;
-  padding: 20px;
+  padding: 20px 0 10px 0;
   font-size: 50px;
+  text-shadow: 1px 1px 4px #e6e6e6;
+}
+
+@media (max-width: 600px) {
+  .intro-titulo {
+    font-size: 2rem;
+    padding: 10px 0 5px 0;
+  }
 }
 
 .intro-texto {
@@ -119,6 +146,34 @@ h2 {
 
 
 
+/* Empieza acá CARRUSEL */
+
+.carousel-full {
+  width: 100vw;
+  min-height: 350px;
+  height: 60vh;
+  margin-left: calc(-50vw + 50%);
+  background: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+}
+.carousel-full img {
+  width: 100vw;
+  height: 60vh;
+  min-height: 350px;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.carousel-caption {
+  background: linear-gradient(180deg, rgba(126,163,132,0.7) 0%, rgba(126,163,132,0.3) 100%);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 80%;
+  margin: 0 auto;
+}
 
 
 .read-the-docs {
@@ -135,12 +190,14 @@ h2 {
 
 .descripcion-carrusel h3 {
   color: #ffffff;
-  font-size: 30px; 
-  margin-bottom: 20px; 
+  font-size: 2rem; 
+  text-shadow: 1px 1px 6px #7ea384;
+  margin-bottom: 10px; 
 }
 .descripcion-carrusel p {
-  color: #dddddd;
-  font-size: 15px; 
+  color: #f8f8f8;
+  font-size: 1.1rem; 
+  text-shadow: 1px 1px 4px #7ea384;
   margin: 0;
 }
 
@@ -160,17 +217,15 @@ h2 {
 }
 
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 600px) {
+  .carousel-full, .carousel-full img {
+    height: 30vh;
+    min-height: 120px;
   }
-  to {
-    transform: rotate(360deg);
+  .descripcion-carrusel h3 {
+    font-size: 1.2rem;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .descripcion-carrusel p {
+    font-size: 0.9rem;
   }
 }

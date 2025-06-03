@@ -14,7 +14,7 @@ function Inicio() {
         de los estudiantes de nuestra institución.
       </p>
 
-      <Carousel>
+      <Carousel className="carousel-full">
         <Carousel.Item>
           <ImagenCarrusel src={imagen1} texto="Gestión académica eficiente"  />
           <Carousel.Caption className="descripcion-carrusel">

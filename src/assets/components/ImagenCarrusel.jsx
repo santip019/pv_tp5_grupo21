@@ -1,7 +1,7 @@
 function ImagenCarrusel({ src, texto }) {
   return (
     <img
-      className="d-block mx-auto"
+      className="d-block w-100"
       src={src}
       alt={texto}
       style={{
