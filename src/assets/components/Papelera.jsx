@@ -32,7 +32,7 @@ const Papelera = ({ alumnos, setAlumnos }) => {
               <Card.Body>
                 <Card.Title>{alumno.nombre} {alumno.apellido}</Card.Title>
                 <Card.Text>LU: {alumno.lu}</Card.Text>
-                <Button variant="info" onClick={() => navigate(`/alumno/${alumno.lu}`)}>Ver Detalles</Button>{' '}
+                <Button variant="info" onClick={() => navigate(`/alumno/${alumno.lu}`, { state: { from: 'papelera' } })}>Ver Detalles</Button>{' '}
                 <Button variant="success" onClick={() => rehabilitarAlumno(alumno.lu)}>Rehabilitar</Button>
               </Card.Body>
             </Card>
